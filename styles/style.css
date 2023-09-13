@@ -41,6 +41,29 @@
     font-size: 1.2rem;
     color:var(--cor-azul)
 }
+form{
+    display:flex;
+    margin-top: 2rem;
+
+}
+#btn{
+    margin-top: 1rem;
+    padding: 5px 0;
+    font-size: 1.3rem;
+    color: var(--cor-azul);
+    background-color: white;
+    border-radius: 5px;
+    border:1px solid var(--cor-azul)
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    margin:0 auto;
+    padding: 3rem;
+    color:var(--cor-azul);
+    border:1px solid var(--cor-azul);
+    
+}
 ul{
     list-style-type: none;
 }
