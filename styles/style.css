@@ -46,6 +46,9 @@ form{
     margin-top: 2rem;
 
 }
+#situacao-aluno{
+    text-align: center;
+}
 #btn{
     margin-top: 1rem;
     padding: 5px 0;

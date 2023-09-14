@@ -21,8 +21,26 @@
             </ul>
         </nav>
     </header>
+    <div class="form">
+        <form>
+            <fieldset>
+                <legend>Calcule a média do aluno</legend>
+                <label for="nota1">Nota 1 : </label>
+                <input type="number" name="nota1" id="nota1" required  />
+                <label for="nota1">Nota 2 : </label>
+                <input type="number" name="nota2" id="nota2" required />
+                <label for="nota1">Nota 3 : </label>
+                <input type="number" name="nota3" id="nota3" required />
+                <label for="freq">Frequência do aluno:</label>
+                <input type="number" name="freq" id="freq" required />
+                <button id="btn-calcula" type="submit" >Calcula media</button>
+            </fieldset>
+        </form>
+        <p id="situacao-aluno"></p>
+    </div>
     <footer class="footer">
         <p>&copy Desenvolvido por Felipe Lúcio</p>
     </footer>
 </body>
+<script src="/js/mediaNota.js"></script>
 </html>
