@@ -9,9 +9,10 @@
     --cor-azul:#0d2d68c9;
 }
 
+
 .main{
     margin: 5%;
-    color:var(--cor-azul)
+    color:var(--cor-azul);
 }
 
 .main__list--exercicios{
@@ -58,14 +59,24 @@ form{
     border-radius: 5px;
     border:1px solid var(--cor-azul)
 }
+#msg{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
 fieldset{
     display: flex;
     flex-direction: column;
     margin:0 auto;
     padding: 3rem;
     color:var(--cor-azul);
-    border:1px solid var(--cor-azul);
+    border:2px solid var(--cor-azul);
+    border-radius: 5px;
     
+}
+legend{
+    font-size: 1.5rem;
 }
 ul{
     list-style-type: none;

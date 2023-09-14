@@ -3,6 +3,8 @@
     const idadeValor = document.getElementById("idade-valor");
     
     btn.addEventListener("click" , function (){
+        event.preventDefault();
+        
         if(input.value != ''){
             let hoje = new Date();
             let [ano, mes, dia] = input.value.split('-').map(Number);
@@ -21,7 +23,6 @@
             styles.marginTop = "2rem";
         }
 
-        event.preventDefault();
     })
     
 

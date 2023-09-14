@@ -1,11 +1,13 @@
 
-const btn = document.getElementById("btn-calcula");
+const btn = document.getElementById("btn");
 const situacaoAluno = document.getElementById("situacao-aluno");
 const notaUm = document.getElementById("nota1");
 const notaDois = document.getElementById("nota2");
 const notaTres = document.getElementById("nota3");
 
 btn.addEventListener('click',function(){    
+    event.preventDefault();
+
     const nota1 = parseFloat(notaUm.value);
     if(isNaN(nota1) || nota1 > 10 || nota1 < 0){
         alert("Valor informado é inválido");
@@ -31,7 +33,6 @@ btn.addEventListener('click',function(){
     situacaoAluno.innerHTML = msg;
     situacaoAluno.style.color = freq < 75 || media < 7 ? "red" : "green";  
     
-    event.preventDefault();
 })
 
 
