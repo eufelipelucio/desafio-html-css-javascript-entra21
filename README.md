@@ -27,6 +27,6 @@ Basta clicar com o botão direito do mouse e escolher a opção Open With Live S
     
 ## Veja o projeto com o Github Pages
 
- - [Desafios HTML, CSS e javascript]()
+ - [Desafios HTML, CSS e javascript]("https://desafio-html-css-javascript-entra21.vercel.app/pages/exercicio3.html")
  
 
