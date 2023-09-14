@@ -59,6 +59,18 @@ form{
     border-radius: 5px;
     border:1px solid var(--cor-azul)
 }
+.container__salario{
+    background-color: #ffffff;
+    width: 300px;
+    color: var(--cor-azul);
+    border: 2px solid var(--cor-azul);
+    border-radius: 5px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+.invisivel{
+    display: none;
+}
 #msg{
     text-align: center;
     font-size: 1.2rem;

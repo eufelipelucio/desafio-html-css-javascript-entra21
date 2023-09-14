@@ -8,6 +8,25 @@
 </head>
 <body>
     <script src="/js/header.js"></script>
+    <form>
+        <fieldset>
+            <legend>Calcula aumento</legend>
+            <label for="cargos">Selecione seu cargo:</label>
+            <select name="cargos" id="cargos" required>
+                <option value="GERENTE">GERENTE</option>
+                <option value="SUPERVISOR">SUPERVISOR</option>
+                <option value="OPERADOR">OPERADOR</option>
+                <option value="OUTROS">OUTROS</option>
+            </select>
+            <label for="salario">Informe seu salário:</label>
+            <input type="number" name="salario" id="salario" required>
+            <button  id="btn" type="submit">Calcular</button>
+        </fieldset>
+    </form>
+    <div class="container__salario invisivel" id="container">
+        
+    </div>
+    <script src="/js/calculaSalario.js"></script>
     <script src="/js/footer.js"></script>
 </body>
 </html>
