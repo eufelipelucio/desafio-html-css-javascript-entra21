@@ -9,3 +9,9 @@
     bottom: 0;
     background-color: var(--cor-azul);
 }
+@media screen and (max-width: 850px){
+    .footer{
+        height: 50px;
+        font-size: 14px;
+    }
+}
