@@ -1,7 +1,7 @@
 const header =
     `<header class="header">
         <input class="hamburguer" type="checkbox">
-            <img class="hamburguer-icon" src="../assets/hambuguer-icon.svg" width="50px" alt="Menu Hambuguer"/>
+            <img class="hamburguer-icon" src="../assets/hamburguer-icon.svg" width="50px" alt="Menu Hambuguer"/>
             <img class="icon-x" src="../assets/icon-x.svg" width="50px" alt="Menu X"/>
         </input>
         <div class="header__logo">

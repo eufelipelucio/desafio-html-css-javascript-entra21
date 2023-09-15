@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,14 +18,16 @@
                 <fieldset>
                     <legend>Validação de idade</legend>
                     <label for="idade">Informe sua idade:</label>
-                    <input type="date" name="idade" id="idade"  >
+                    <input type="date" name="idade" id="idade">
                     <button id="btn" type="submit">Verificar</button>
                 </fieldset>
             </form>
         </div>
-        <p id="idade-valor"></p>
+        <div class="container__result invisivel" id="container">
+        </div>
     </main>
     <script src="/js/footer.js"></script>
 </body>
 <script src="/js/validaIdade.js"></script>
+
 </html>

@@ -5,16 +5,19 @@ const salario = document.getElementById("salario");
 const container = document.getElementById("container");
 container.classList.add("invisivel")
 
-const componentResult = (salario, novoSalario, aumento) =>
-    `   <p>Salário: R$ ${salario}</p>
-        <p>Novo salário: R$ ${novoSalario}</p>
-        <p>Valor do aumento: R$  ${aumento}</p>
-    `
+const componentResult = (salario, novoSalario, aumento) => {
+    return (
+        `   <p>Salário: R$ ${salario}</p>
+            <p>Novo salário: R$ ${novoSalario}</p>
+            <p>Valor do aumento: R$  ${aumento}</p>
+        `
+    )
+}
 
 
-btn.addEventListener("click",function(){
+btn.addEventListener("click", function () {
     event.preventDefault();
-    if(salario.value == ''){
+    if (salario.value == '') {
         alert("Informe um valor válido")
         salario.focus();
         return;
@@ -24,30 +27,30 @@ btn.addEventListener("click",function(){
     const salarioFloat = parseFloat(document.getElementById("salario").value);
     let novoSalario = 0;
     let valorAumento = 0;
-    
-    switch(cargo) {
-		case "GERENTE":			
-			novoSalario = salarioFloat + (salarioFloat * 0.05);
-			valorAumento = novoSalario - salarioFloat;
+
+    switch (cargo) {
+        case "GERENTE":
+            novoSalario = salarioFloat + (salarioFloat * 0.05);
+            valorAumento = novoSalario - salarioFloat;
             container.classList.remove("invisivel");
-            container.innerHTML = componentResult(salarioFloat, novoSalario,valorAumento);
-			break;
-		case "SUPERVISOR":
-			novoSalario = salarioFloat + (salarioFloat * 0.08);
-			valorAumento = novoSalario - salarioFloat;
+            container.innerHTML = componentResult(salarioFloat, novoSalario, valorAumento);
+            break;
+        case "SUPERVISOR":
+            novoSalario = salarioFloat + (salarioFloat * 0.08);
+            valorAumento = novoSalario - salarioFloat;
             container.classList.remove("invisivel");
-            container.innerHTML = componentResult(salarioFloat, novoSalario,valorAumento);
-			break;
-		case "OPERADOR":
-			novoSalario = salarioFloat + (salarioFloat * 0.09);
-			valorAumento = novoSalario - salarioFloat;
-			
-			break;
-		default:
-			novoSalario = salarioFloat + (salarioFloat * 0.10);
-			valorAumento = novoSalario - salarioFloat;
+            container.innerHTML = componentResult(salarioFloat, novoSalario, valorAumento);
+            break;
+        case "OPERADOR":
+            novoSalario = salarioFloat + (salarioFloat * 0.09);
+            valorAumento = novoSalario - salarioFloat;
+
+            break;
+        default:
+            novoSalario = salarioFloat + (salarioFloat * 0.10);
+            valorAumento = novoSalario - salarioFloat;
             container.classList.remove("invisivel");
-            container.innerHTML = componentResult(salarioFloat, novoSalario,valorAumento);
-		}
-   
+            container.innerHTML = componentResult(salarioFloat, novoSalario, valorAumento);
+    }
+
 })

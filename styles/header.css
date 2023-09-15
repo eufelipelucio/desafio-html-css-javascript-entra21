@@ -35,6 +35,7 @@ input.hamburguer {
     /* and place it over the hamburger */
     -webkit-touch-callout: none;
 }
+
 .icon-x {
     display: none;
     width: 40px;
@@ -48,6 +49,7 @@ input.hamburguer {
 
     -webkit-touch-callout: none;
 }
+
 .hamburguer-icon {
     display: none;
     width: 40px;
@@ -58,7 +60,7 @@ input.hamburguer {
     left: 10px;
     z-index: 1;
     /* and place it over the hamburger */
-    
+
     -webkit-touch-callout: none;
 }
 
@@ -67,58 +69,65 @@ input.hamburguer {
 @media screen and (max-width: 850px) {
     .navbar {
         display: none;
-        position:absolute;
-        
-    }
-    .hamburguer-icon{
-        display: block;
-    }
-    
-    .icon-x{
-        display:none;
-    }
-    
-    input:checked ~ .navbar {
-        display: block;
-    }
-    input:checked ~ .hamburguer-icon {
-        display:none ;
+        position: absolute;
 
     }
-    input:checked ~ .icon-x{
-        display: block;
 
-    }
-    
-
-    ul.navbar__exercicios{
-        display: inline-block;
-        position:relative;
-        text-align: center;
-        background-color:var(--cor-azul);
-        border-radius: 5px;
-        left: -220px;
-        top:120px;
-        width: 200px;
-        box-shadow: -3px 8px 31px 1px rgba(0, 0, 0, 0.64);
-    -webkit-box-shadow: -3px 8px 31px 1px rgba(0, 0, 0, 0.64);
-    -moz-box-shadow: -3px 8px 31px 1px rgba(0, 0, 0, 0.64);
-
-    }
-    li.navbar__exercicio--link a{
-        color: #ffffff;
-    }
-    li.navbar__exercicio--link{
-        margin: 1rem;
-    }
     .hamburguer-icon {
         display: block;
     }
+
+    .icon-x {
+        display: none;
+    }
+
+    input:checked~.navbar {
+        display: block;
+    }
+
+    input:checked~.hamburguer-icon {
+        display: none;
+
+    }
+
+    input:checked~.icon-x {
+        display: block;
+
+    }
+
+
+    ul.navbar__exercicios {
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        background-color: var(--cor-azul);
+        border-radius: 5px;
+        left: -220px;
+        top: 120px;
+        width: 200px;
+        box-shadow: -3px 8px 31px 1px rgba(0, 0, 0, 0.64);
+        -webkit-box-shadow: -3px 8px 31px 1px rgba(0, 0, 0, 0.64);
+        -moz-box-shadow: -3px 8px 31px 1px rgba(0, 0, 0, 0.64);
+
+    }
+
+    li.navbar__exercicio--link a {
+        color: #ffffff;
+    }
+
+    li.navbar__exercicio--link {
+        margin: 1rem;
+    }
+
+    .hamburguer-icon {
+        display: block;
+    }
+
     .header {
         display: flex;
         justify-content: center;
     }
 
-    
+
 
 }

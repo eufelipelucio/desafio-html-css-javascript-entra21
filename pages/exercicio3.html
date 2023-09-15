@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/footer.css">
 </head>
+
 <body>
     <script src="/js/header.js"></script>
     <div class="form">
@@ -15,19 +17,21 @@
             <fieldset>
                 <legend>Calcule a média do aluno</legend>
                 <label for="nota1">Nota 1 : </label>
-                <input type="number" name="nota1" id="nota1" required  />
+                <input type="number" name="nota1" id="nota1" required />
                 <label for="nota1">Nota 2 : </label>
                 <input type="number" name="nota2" id="nota2" required />
                 <label for="nota1">Nota 3 : </label>
                 <input type="number" name="nota3" id="nota3" required />
                 <label for="freq">Frequência do aluno:</label>
                 <input type="number" name="freq" id="freq" required />
-                <button id="btn" type="submit" >Calcula media</button>
+                <button id="btn" type="submit">Calcula media</button>
             </fieldset>
         </form>
-        <p id="situacao-aluno"></p>
+        <div class="container__result invisivel" id="container">
+        </div>
     </div>
     <script src="/js/footer.js"></script>
 </body>
 <script src="/js/mediaNota.js"></script>
+
 </html>
