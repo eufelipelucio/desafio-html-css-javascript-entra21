@@ -44,7 +44,8 @@ btn.addEventListener("click", function () {
         case "OPERADOR":
             novoSalario = salarioFloat + (salarioFloat * 0.09);
             valorAumento = novoSalario - salarioFloat;
-
+            container.classList.remove("invisivel");
+            container.innerHTML = componentResult(salarioFloat, novoSalario, valorAumento);
             break;
         default:
             novoSalario = salarioFloat + (salarioFloat * 0.10);
