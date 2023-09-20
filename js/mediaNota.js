@@ -36,7 +36,7 @@ btn.addEventListener('click', function () {
         let media = (nota1 + nota2 + nota3) / 3;
         let msg = freq < 75 || media < 7 ? "Aluno REPROVADO!!" : "Aluno APROVADO!!";
         let color = freq < 75 || media < 7 ? "red" : "green";
-        container.classList.remove("d-sm-none");
+        container.classList.remove("d-none");
         container.innerHTML = componentSituacaoAluno(msg, color);
     } else {
         alert("Valor informado inválido!")
