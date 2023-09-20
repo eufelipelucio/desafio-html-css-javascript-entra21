@@ -1,7 +1,7 @@
 const btn = document.getElementById("btn");
 const input = document.getElementById("idade");
 const container = document.getElementById("container");
-container.classList.add("d-sm-none");
+container.classList.add("d-none");
 
 const componentIdade = (msg, color) => {
     return (
