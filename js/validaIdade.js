@@ -1,12 +1,12 @@
 const btn = document.getElementById("btn");
 const input = document.getElementById("idade");
 const container = document.getElementById("container");
-container.classList.add("invisivel");
+container.classList.add("d-sm-none");
 
 const componentIdade = (msg, color) => {
     return (
         `
-            <p id="idade-valor" style="color:${color}">${msg}</p>
+            <p style="color:${color}">${msg}</p>
             `
     )
 }
@@ -26,7 +26,7 @@ btn.addEventListener("click", function () {
 
         let msg = idade < 18 ? "Você é menor de idade!!" : "Você é maior de idade!!";
         let color = idade < 18 ? "red" : "green";
-        container.classList.remove("invisivel");
+        container.classList.remove("d-none");
         container.innerHTML = componentIdade(msg, color);
 
     }

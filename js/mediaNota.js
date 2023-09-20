@@ -4,12 +4,12 @@ const notaUm = document.getElementById("nota1");
 const notaDois = document.getElementById("nota2");
 const notaTres = document.getElementById("nota3");
 const container = document.getElementById("container");
-container.classList.add("invisivel")
+container.classList.add("d-none")
 
 const componentSituacaoAluno = (msg, color) => {
     return (
         `
-        <p id="situacao-aluno" style="color:${color}">${msg}</p>
+        <p style="color:${color}">${msg}</p>
         `
     )
 }
@@ -36,7 +36,7 @@ btn.addEventListener('click', function () {
         let media = (nota1 + nota2 + nota3) / 3;
         let msg = freq < 75 || media < 7 ? "Aluno REPROVADO!!" : "Aluno APROVADO!!";
         let color = freq < 75 || media < 7 ? "red" : "green";
-        container.classList.remove("invisivel");
+        container.classList.remove("d-sm-none");
         container.innerHTML = componentSituacaoAluno(msg, color);
     } else {
         alert("Valor informado inválido!")

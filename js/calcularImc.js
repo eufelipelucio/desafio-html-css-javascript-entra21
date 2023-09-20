@@ -2,18 +2,18 @@ const peso = document.getElementById("peso");
 const altura = document.getElementById("altura");
 const btn = document.getElementById("btn");
 const container = document.getElementById("container");
-container.classList.add("invisivel")
+container.classList.add("d-none")
 
 const componentMsg = (msg) => {
     return (
         `
-           <p id="msg">${msg}</p>
+           <p>${msg}</p>
         `
     )
 }
 
 const renderComponent = (msg) => {
-    container.classList.remove("invisivel");
+    container.classList.remove("d-none");
     container.appendChild
     container.innerHTML = componentMsg(msg);
 }

@@ -1,6 +1,6 @@
 const footer = `
-    <footer class="footer">
-        <p>&copy Desenvolvido por Felipe Lúcio</p>
+    <footer class="position-fixed fs-4 w-100 bg-primary bottom-0">
+        <p class="text-center text-white align-middle">&copy Desenvolvido por Felipe Lúcio</p>
     </footer>
 
 `

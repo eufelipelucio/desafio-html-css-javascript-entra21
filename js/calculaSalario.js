@@ -3,7 +3,7 @@ const btn = document.getElementById("btn");
 const cargo = document.getElementById("cargos");
 const salario = document.getElementById("salario");
 const container = document.getElementById("container");
-container.classList.add("invisivel")
+container.classList.add("d-none")
 
 const componentResult = (salario, novoSalario, aumento) => {
     return (
@@ -32,26 +32,26 @@ btn.addEventListener("click", function () {
         case "GERENTE":
             novoSalario = salarioFloat + (salarioFloat * 0.05);
             valorAumento = novoSalario - salarioFloat;
-            container.classList.remove("invisivel");
+            container.classList.remove("d-none");
             container.innerHTML = componentResult(salarioFloat, novoSalario, valorAumento);
             break;
         case "SUPERVISOR":
             novoSalario = salarioFloat + (salarioFloat * 0.08);
             valorAumento = novoSalario - salarioFloat;
-            container.classList.remove("invisivel");
+            container.classList.remove("d-none");
             container.innerHTML = componentResult(salarioFloat, novoSalario, valorAumento);
             break;
         case "OPERADOR":
             novoSalario = salarioFloat + (salarioFloat * 0.09);
             valorAumento = novoSalario - salarioFloat;
-            container.classList.remove("invisivel");
+            container.classList.remove("d-none");
             container.innerHTML = componentResult(salarioFloat, novoSalario, valorAumento);
             break;
         default:
             novoSalario = salarioFloat + (salarioFloat * 0.10);
             valorAumento = novoSalario - salarioFloat;
-            container.classList.remove("invisivel");
+            container.classList.remove("d-none");
             container.innerHTML = componentResult(salarioFloat, novoSalario, valorAumento);
     }
-
-})
+}
+)

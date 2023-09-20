@@ -1,20 +1,26 @@
 const header =
-    `<header class="header">
-        <input class="hamburguer" type="checkbox">
-            <img class="hamburguer-icon" src="../assets/hamburguer-icon.svg" width="50px" alt="Menu Hambuguer"/>
-            <img class="icon-x" src="../assets/icon-x.svg" width="50px" alt="Menu X"/>
-        </input>
-        <div class="header__logo">
-            <img  class="logo" src="../assets/logo-felipe-lucio.png" alt="Logo Felipe Lúcio">
-        </div>
-        <nav class="navbar">
-            <ul class="navbar__exercicios">
-                <li class="navbar__exercicio--link"><a href="../index.html">Exercício 1</a></li>
-                <li class="navbar__exercicio--link"><a href="/pages/exercicio2.html">Exercício 2</a></li>
-                <li class="navbar__exercicio--link"><a href="/pages/exercicio3.html">Exercício 3</a></li>
-                <li class="navbar__exercicio--link"><a href="/pages/exercicio4.html">Exercício 4</a></li>
-                <li class="navbar__exercicio--link"><a href="/pages/exercicio5.html">Exercício 5</a></li>
-            </ul>
+    `<header>
+        <nav class="navbar navbar-expand-sm bg-primary p-2">
+            <a class="navbar-brand fs-4 text-white ms-3" href="../index.html"><i data-feather="home"></i></a>
+            <button class="navbar-toggler text-white" role="button" data-bs-parent="true" type="button" aria-expanded="true" data-bs-toggle="collapse" data-bs-target="#coll">
+                <span class="navbar-toggler-icon text-white"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="coll">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white text-center fs-5" href="/pages/exercicio2.html">IDADE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white text-center fs-5" href="/pages/exercicio3.html">SITUAÇÃO-ALUNO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white text-center fs-5" href="/pages/exercicio4.html">IMC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white text-center fs-5" href="/pages/exercicio5.html">AUMENTO</a>
+                    </li>
+                </ul>
+            </div>  
         </nav>
     </header>
     `
