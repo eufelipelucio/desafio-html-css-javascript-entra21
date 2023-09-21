@@ -68,24 +68,25 @@ function editar(i) {
     var novoEmail = document.getElementsByClassName("novoEmailUser")[i].value;
     var novoTel = document.getElementsByClassName("novoTelUser")[i].value;
     var newUser = users[i];
-    if (novoEmail == users[i].email) {
-        alert("Insira um email diferente");
-        return;
-    }
     const result = users.findIndex(user => {
         return user.email == novoEmail;
     })
 
     if (result == -1) {
-        newUser.nome = novoNome;
-        newUser.email = novoEmail;
-        newUser.tel = novoTel;
-        carregar();
-    } else {
+        if (novoEmail == users[i].email) {
+            alert("Insira um email diferente");
+            return;
+        }
+    } else if (result !== i) {
         alert("email cadastrado")
         novoEmail = users[i].email;
         carregar();
+        return;
     }
+    newUser.nome = novoNome;
+    newUser.email = novoEmail;
+    newUser.tel = novoTel;
+    carregar();
 }
 
 
