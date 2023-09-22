@@ -23,8 +23,8 @@ function buscaGatos(url){
         data.map((item) => {
             return (
                 image += 
-                    `<div class="card m-auto" style="width:250px">
-                        <img src=${item.url}  class="card-img-top" alt="Image">
+                    `<div class="card m-auto mb-4" style="width:250px" >
+                        <img src=${item.url}  height="230" class="card-img-top " alt="Image">
                     </div>`
             )
         });
