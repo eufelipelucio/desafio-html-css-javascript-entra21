@@ -17,11 +17,9 @@ async function teste() {
             res(eval(expresao.value))
         }
     }).catch((err) => {
-        if (err) {
-           return "Inválido";
-        }
+       return "Inválido"
     })
-    return expresao.value = await result;
+    return expresao.value = await result
 }
 calcular.addEventListener("click",()=>{
     teste();
