@@ -14,7 +14,7 @@ function trocarNumero(num){
     var i = verificaPosicao()
     if(numeros.includes(parseInt(num))){
         var novoNum = parseInt(prompt("Insira o número que deseja trocar o "+ num));
-        if(!isNaN(novoNum)&& novoNum !== num){
+        if(!isNaN(novoNum)&& novoNum !== num && !números.includes(novoNum)){
             numeros[i]= novoNum
             localStorage.setItem("numeros",JSON.stringify(numeros))
         }else{
