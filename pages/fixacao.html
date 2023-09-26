@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício De Fixação</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body class="bg-dark text-white text-center">
+    <form class="d-flex flex-column w-75 m-auto">
+        <div class="mb-3 mt-5">
+            <label for="numero" class="form-label mb-3 fs-2">Insira um número:</label>
+            <input type="number" class="form-control mb-3" id="numero" required  placeholder="Digite um número"> 
+        </div>        
+        <div class="d-flex flex-wrap justify-content-around">
+            <button id="inserir" class="btn mb-3 btn-primary fs-5">Inserir</button>
+            <button id="encontrar" class="btn mb-3 btn-warning fs-5">Encontrar Posição</button>
+            <button id="remover" class="btn mb-3 btn-danger fs-5" >Remover</button>
+            <button id="trocar" class="btn mb-3 btn-info fs-5">Trocar</button>
+        </div>
+        <label for="ordem" class="form-label mb-3 fs-2">Selecione a ordem que deseja visualizar:</label> 
+        <select class="form-control mb-3" name="ordem" id="ordem">
+            <option value="PADRAO">PADRÃO</option>
+            <option value="DECRESCENTE">DECRESCENTE</option>
+            <option value="CRESCENTE">CRESCENTE</option>
+        </select>
+    </form>
+    <span id="posicaoTexto" class="fs-3"></span> 
+    <div  class="text-center">
+        <button id="mostrar" class="btn mb-3 bg-success fs-5 text-white">Mostrar Números</button>
+        <table class="w-50 m-auto border" >
+            <thead >
+                <tr >
+                    <th>Números</th>
+                    <th>Posição</th>
+                </tr>
+            </thead>
+            <tbody class="border"  id="text">
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="../js/fixacao.js"></script>
+</html>
