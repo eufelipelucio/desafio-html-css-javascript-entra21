@@ -14,11 +14,19 @@ function trocarNumero(num){
     var i = verificaPosicao()
     if(numeros.includes(parseInt(num))){
         var novoNum = parseInt(prompt("Insira o número que deseja trocar o "+ num));
-        if(!isNaN(novoNum)&& novoNum !== num && !números.includes(novoNum)){
-            numeros[i]= novoNum
-            localStorage.setItem("numeros",JSON.stringify(numeros))
+        if(!isNaN(novoNum)&& novoNum !== num && !numeros.includes(novoNum)){
+            if(!numeros.includes(novoNum)){
+                numeros[i]= novoNum
+                localStorage.setItem("numeros",JSON.stringify(numeros))
+                alert("Número trocado com sucesso!!")
+                numero.value = '';
+            }else{
+                alert("Número já está existe!")
+                numero.value = '';
+            }
         }else{
             alert("Informe um novo número válido")
+            numero.value = '';
         }
    }
     mostraNumeros();   
@@ -48,6 +56,7 @@ function apagarNumero(num) {
             mostraNumeros()
             numero.value = '';
             numero.focus();
+            alert("Número removido com sucesso!")
         }
     }else{
         numero.value = '';
@@ -60,7 +69,6 @@ function inserir(num) {
     if (!numeros.includes(parseInt(num))) {
         numeros.push(parseInt(num));
         localStorage.setItem("numeros", JSON.stringify(numeros));
-        num = '';
         alert("Número inserido com sucesso!!");
         mostraNumeros()
     } else {
@@ -68,15 +76,16 @@ function inserir(num) {
     }
 }
 function verificaPosicao() {
+    var num = -1;
     var numeros = pegarNumeros(ordem.value);
     if(numeros.includes(parseInt(numero.value))){
-        var num = 0;
         numeros.map((item, i) => item == numero.value ? num = i : null)
         return num;
     }else{
         alert("Posição Não Encontrado!")
         numero.value = '';
-        return false;
+        posicaoTexto.innerHTML = ''
+        return num;
     }
 }
 
@@ -112,8 +121,11 @@ btnMostrar.addEventListener('click', (e) => {
 btnPosicao.addEventListener('click', (e) => {
     e.preventDefault();
     var posicao = verificaPosicao();
-    mostraNumeros();
-    posicaoTexto.innerHTML = "Posição: " + posicao.toString();
+    if(posicao >= 0){
+        mostraNumeros();
+        posicaoTexto.innerHTML = "Posição: " + posicao.toString();
+        numero.value = '';
+    }
 })
 
 btnRemover.addEventListener('click', (e) => {
