@@ -9,6 +9,20 @@ const btnTrocar = document.getElementById("trocar");
 const btnPosicao = document.getElementById("encontrar");
 const btnMostrar = document.getElementById("mostrar");
 
+function trocarNumero(num){
+    var numeros = pegarNumeros();
+    var i = verificaPosicao()
+    if(numeros.includes(parseInt(num))){
+        var novoNum = parseInt(prompt("Insira o número que deseja trocar o "+ num));
+        if(isNaN(novoNum)&& novoNum !== num){
+            numeros[i]= novoNum
+            localStorage.setItem("numeros",JSON.stringify(numeros))
+        }else{
+            alert("Informe um novo número válido")
+        }
+   }
+    mostraNumeros();   
+}
 
 function mostraNumeros() {
     var table = '';
@@ -61,7 +75,8 @@ function verificaPosicao() {
         return num;
     }else{
         alert("Posição Não Encontrado!")
-        numero.value = ''
+        numero.value = '';
+        return false;
     }
 }
 
@@ -106,7 +121,10 @@ btnRemover.addEventListener('click', (e) => {
     apagarNumero(parseInt(numero.value));
 
 })
-
+btnTrocar.addEventListener('click',(e)=>{
+    e.preventDefault()
+    trocarNumero(numero.value);
+})
 
 btnInserir.addEventListener('click', (e) => {
     e.preventDefault();
