@@ -1,16 +1,17 @@
 const cep = document.getElementById("cep");
 const rua = document.getElementById('rua');
 const cidade = document.getElementById('cidade');
-const bairr = document.getElementById('bairro');
+const bairro = document.getElementById('bairro');
 
-function buscarCep(){
-    fetch(`https://viacep.com.br/ws/${cep.value}/json/`)
-    .then((dados)=> dados.json())
-    .then((response)=> {
-        var { logradouro, bairro, localidade } = response;
-        rua.value = logradouro;
-        bairr.value = bairro;
-        cidade.value = localidade;
-        }
-    )
+async function buscarCep(){
+    try{
+        const response = await fetch(`https://viacep.com.br/ws/${cep.value}/json/`) 
+        const dados = await response.json();
+        rua.value = dados.logradouro
+        bairro.value = dados.bairro
+        cidade.value = dados.localidade
+    }catch(err){
+        console.log(err)
+    }
+    return dados;
 }
